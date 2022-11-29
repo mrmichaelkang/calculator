@@ -14,4 +14,14 @@ function divide(x, y) {
   return x / y;
 }
 
-function operate() {}
+function operate(operator, x, y) {
+  const operations = {
+    "+": add,
+    "-": subtract,
+    "*": multiply,
+    "/": divide,
+  };
+
+  const result = operations[operator](x, y);
+  return result;
+}
